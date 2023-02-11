@@ -15,9 +15,14 @@ rateAgain.addEventListener('click', () => {
 });
 
 rates.forEach((rate) => {
-    rate.addEventListener('click', () => {
-        rate.style.backgroundColor = 'grey';
-        rate.style.color = 'white';
+    rate.addEventListener("click", () => {
+        rate.style.backgroundColor = "grey";
+        rate.style.color = "white";
         rating.innerHTML = rate.innerHTML;
-    })
-})
+        submitButton.addEventListener("click", () => {
+            mainContainer.style.display = "none";
+            thanksContainer.style.display = "flex";
+        });
+    });
+});
+
